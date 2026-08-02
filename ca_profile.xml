@@ -3,6 +3,7 @@
   <Profile>
     <Name>EdvinAlvarado</Name>
     <Description>Unraid Community Applications template repository for KOReader Sync Server.</Description>
+    <Icon>https://raw.githubusercontent.com/koreader/koreader/master/resources/koreader.png</Icon>
     <GitHub>https://github.com/EdvinAlvarado/koreader-sync-server-ca-template</GitHub>
     <Support>https://github.com/EdvinAlvarado/koreader-sync-server-ca-template/issues</Support>
   </Profile>
