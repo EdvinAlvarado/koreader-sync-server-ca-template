@@ -12,7 +12,7 @@ https://raw.githubusercontent.com/EdvinAlvarado/koreader-sync-server-ca-template
 
 - Docker image: `koreader/kosync:latest`
 - HTTPS listener: container port `7200`
-- Persistent Redis data: `/mnt/user/appdata/koreader-sync-server/data/redis`
+- Persistent Redis data: `/mnt/user/appdata/kosync/data/redis`
 - Optional log paths:
-  - `/mnt/user/appdata/koreader-sync-server/logs/app`
-  - `/mnt/user/appdata/koreader-sync-server/logs/redis`
+  - `/mnt/user/appdata/kosync/logs/app`
+  - `/mnt/user/appdata/kosync/logs/redis`
