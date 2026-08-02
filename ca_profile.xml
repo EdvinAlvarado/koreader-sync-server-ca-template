@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<CommunityApplications>
+  <Profile>
+    Unraid Community Applications template repository for KOReader Sync Server.
+  </Profile>
+  <Icon>https://raw.githubusercontent.com/koreader/koreader/master/resources/koreader.png</Icon>
+  <WebPage>https://github.com/EdvinAlvarado/koreader-sync-server-ca-template</WebPage>
+</CommunityApplications>
