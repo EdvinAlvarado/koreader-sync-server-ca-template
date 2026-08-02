@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>koreader-sync-server</Name>
+  <Repository>koreader/kosync:latest</Repository>
+  <Registry>https://hub.docker.com/r/koreader/kosync</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/EdvinAlvarado/koreader-sync-server-ca-template/issues</Support>
+  <Project>https://github.com/koreader/koreader-sync-server</Project>
+  <Readme>https://raw.githubusercontent.com/koreader/koreader-sync-server/master/README.md</Readme>
+  <Overview>KOReader Sync Server is a self-hosted sync service for KOReader devices. The official image serves HTTPS on container port 7200 with a self-signed certificate and stores its state in Redis, so persistent Redis storage is required. Keep the exposed port on a trusted network, or place the container behind a reverse proxy that terminates TLS.</Overview>
+  <Category>Network:Other:Tools:</Category>
+  <WebUI>https://[IP]:[PORT:7200]/healthcheck</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/EdvinAlvarado/koreader-sync-server-ca-template/main/templates/koreader-sync-server.xml</TemplateURL>
+  <Changes>
+### 1.0.0
+- Initial Unraid Community Applications template for koreader/kosync
+  </Changes>
+  <Description>
+[b]First run:[/b]
+1. Deploy the container and wait for it to start.
+2. Open the healthcheck endpoint and confirm it returns {"state":"OK"}.
+3. Point KOReader clients at `https://YOUR-SERVER:7200/` or at your reverse proxy URL.
+[br][br]
+[b]Storage:[/b] Redis data at `/var/lib/redis` must be persisted. The app and Redis log paths are optional, but keeping them on appdata makes troubleshooting easier.
+[br][br]
+[b]Networking:[/b] The container listens on HTTPS with a self-signed certificate on port `7200`. If you run it behind a reverse proxy, you can change only the host-side port here and let the proxy handle certificate management.
+  </Description>
+  <Config Name="HTTPS Port" Target="7200" Default="7200" Mode="tcp" Description="Host port mapped to the container HTTPS listener" Type="Port" Display="always" Required="true" Mask="false">7200</Config>
+  <Config Name="Application Logs" Target="/app/koreader-sync-server/logs" Default="/mnt/user/appdata/koreader-sync-server/logs/app" Mode="rw" Description="Optional persistent application log directory" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/koreader-sync-server/logs/app</Config>
+  <Config Name="Redis Logs" Target="/var/log/redis" Default="/mnt/user/appdata/koreader-sync-server/logs/redis" Mode="rw" Description="Optional persistent Redis log directory" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/koreader-sync-server/logs/redis</Config>
+  <Config Name="Redis Data" Target="/var/lib/redis" Default="/mnt/user/appdata/koreader-sync-server/data/redis" Mode="rw" Description="Required persistent Redis data directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/koreader-sync-server/data/redis</Config>
+  <Config Name="Enable User Registration" Target="ENABLE_USER_REGISTRATION" Default="true" Mode="" Description="Set to false to require pre-created accounts only" Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+</Container>
