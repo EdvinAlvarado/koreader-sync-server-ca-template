@@ -14,7 +14,11 @@
   <Category>Network:Other:Tools:</Category>
   <WebUI>https://[IP]:[PORT:7200]/healthcheck</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/EdvinAlvarado/koreader-sync-server-ca-template/main/templates/koreader-sync-server.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/koreader/koreader/master/resources/koreader.png</Icon>
   <Changes>
+### 1.0.1
+- Add KOReader icon to the template
+
 ### 1.0.0
 - Initial Unraid Community Applications template for koreader/kosync
   </Changes>
