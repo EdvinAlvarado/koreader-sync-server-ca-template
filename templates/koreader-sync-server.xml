@@ -11,7 +11,7 @@
   <Project>https://github.com/koreader/koreader-sync-server</Project>
   <Readme>https://raw.githubusercontent.com/koreader/koreader-sync-server/master/README.md</Readme>
   <Overview>KOReader Sync Server is a self-hosted sync service for KOReader devices. The official image serves HTTPS on container port 7200 with a self-signed certificate and stores its state in Redis, so persistent Redis storage is required. Keep the exposed port on a trusted network, or place the container behind a reverse proxy that terminates TLS.</Overview>
-  <Category>Network:Other:Tools:</Category>
+  <Category>MediaServer:Books</Category>
   <WebUI>https://[IP]:[PORT:7200]/healthcheck</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/EdvinAlvarado/koreader-sync-server-ca-template/main/templates/koreader-sync-server.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/koreader/koreader/master/resources/koreader.png</Icon>
