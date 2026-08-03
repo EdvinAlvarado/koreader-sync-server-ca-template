@@ -15,10 +15,10 @@
   <WebUI>https://[IP]:[PORT:7200]/healthcheck</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/EdvinAlvarado/koreader-sync-server-ca-template/main/templates/koreader-sync-server.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/koreader/koreader/master/resources/koreader.png</Icon>
-  <MinVer>6.1</MinVer>
-  <MaxVer>7</MaxVer>
   <License>AGPL</License>
   <Changes>
+### 1.0.1
+    - Cleared version requirement for koreader/kosync image to allow for future updates without template changes. 
 ### 1.0.0
 - Initial Unraid Community Applications template for koreader/kosync
   </Changes>
